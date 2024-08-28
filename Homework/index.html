@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="madya.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <section class="titel">
+            <img src="/image/logo.webp" alt="icon">
+            <h2 id="homepage">მკითხველი</h2>
+        </section>
+        <section class="register">
+            <div class="person">
+                <p>მოგესალმებით - <span id="username"></span></p>
+            </div>
+            <img src="/image/person-icon.png" alt="person icon" class="log-in">
+
+
+            <p class="log-aut">LOG-Aut</p>
+            <p class="log-in">LOG-In</p>
+
+            <div class="regist">
+                <form id="register">
+                    <input type="text"  class="input-reg" placeholder="Name" id="re-name">
+                    <p id="rname"></p>
+                    <input type="text" class="input-reg" placeholder="Surname" id="re-surname">
+                    <p id="rsurname"></p>
+                    <input type="email" class="input-reg" placeholder="E-mail" id="re-email">
+                    <p id="remail"></p>
+                    <input type="password" class="input-reg" placeholder="password" id="re-password"> 
+                    <p id="rpassword"></p>
+                    <p class="p">Are you registered? <span onclick="Register()">Log in</span></p>
+                    <input type="button" value="Register" onclick="register()">
+            
+                            
+                </form>
+            
+                <form id="log-in">
+                    <input type="text"  class="input-reg" placeholder="Name" id="log-name">
+                    <p id="lname"> </p>
+                    <input type="email" class="input-reg" placeholder="E-mail" id="log-email">
+                    <p id="lemail"></p>
+                    <input type="password" class="input-reg" placeholder="password" id="log-password"> 
+                    <p id="lpassword"></p>
+                    <p class="p">You are not registered? <span onclick=" Login()">Register</span></p>
+                    <input type="button" value="Log in" onclick="login()">
+                </form>
+        
+            </div>
+    </section>
+
+    </header>
+    <main>
+        <nav>
+            <!--  -->
+            <section class="menu">
+                <i class="fa-solid fa-bars" id="navbar"></i> 
+            </section>
+
+            <aside id="nav">
+                <ul>
+                    <li class="Adult">მკითხველთათვის</li>
+                    <li class="Child">საბავშვო ლიტერატურა</li>
+                    <li class="Poetry">პოეზია</li>
+                    <li class="Language">უცხო ენოვანი</li>
+                </ul>
+            </aside>
+
+            <aside id="nav1">
+                <dic class="container">
+                    <p class="Adult">მკითხველთათვის</p>
+                    <p class="Child">საბავშვო ლიტერატურა</p>
+                    <p class="Poetry">პოეზია</p>
+                    <p class="Language">უცხო ენოვანი</p>
+                </dic>
+
+            </aside>
+            <!--  -->
+            <section class="card">
+                <i class="fa-solid fa-cart-shopping" id="shopping"></i>
+                <div class="search">
+                    <input type="text" placeholder="მიუთითეთ ავტორი" id="search">
+                    <i class="fa-solid fa-magnifying-glass" id="btnsearch"></i>
+                </div>
+            
+                <div class="cartnum">
+                    <p id="num"></p>
+                </div>
+                <ul id="shoppingdiv"> 
+                    <li>
+                        <!-- <button id="exit">x</button> -->
+                        <div class="contp">
+                            <p class="sum-num">რაოდენობა: <span id="sum-num"></span></p>
+                            <p class="sum-prise">ფასი: <span id="sum-prise"></span></p>
+                        </div>
+                        <div id="container-shop">
+                            <!-- <div class="child1">
+
+                            </div> -->
+                            
+                        </div>
+                        <button id="buy">buy</button>
+                    </li>
+                </ul>
+            </section>
+        </nav>
+        <hr>
+
+        <div class="slide">
+            
+            <div class="slide-child">
+                <div class="slide-child-container">
+                    <div class="div1 div">
+                        <i class="fa-solid fa-cart-plus"></i>
+                        <p class="img">/image/adult.chabua.jpg</p>
+                        <p id="img"><img src="/image/adult.chabua.jpg"  alt=""></p>
+                        <p id="pasi">20 </p>
+                        <p id="avtori">ჭაბუა ამირეჯიბი</p>
+                        <p id="dasaxeleca">"დათა თუთაშხია"</p>
+                        <p id="shesaxeb">Lorem ipsum dolor sit,</p>
+                    </div>
+                    <div class="div2 div">
+                        <p class="img">/image/adult.dante.jpg</p>
+                        <i class="fa-solid fa-cart-plus"></i>
+                        <p id="img"><img src="/image/adult.dante.jpg" alt=""></p>
+                        <p id="pasi">25 </p>
+                        <p id="avtori">დანტე ალეგიერი</p>
+                        <p id="dasaxeleca">"ღვთაებრივი კომედია"</p>
+                        <p id="shesaxeb">Lorem, ipsum.</p>
+                    </div>
+                    <div class="div2 div">
+                        <p class="img">/image/adult.diuma.webp</p>
+                        <i class="fa-solid fa-cart-plus"></i>
+                        <p id="img"><img src="/image/adult.diuma.webp" alt=""></p>
+                        <p id="pasi">20 </p>
+                        <p id="avtori">ალექსანდრე დიუმა</p>
+                        <p id="dasaxeleca">"კავკასია"</p>
+                        <p id="shesaxeb">anotacia</p>
+                    </div>
+                    <div class="div2 div">
+                        <i class="fa-solid fa-cart-plus"></i>
+                        <p class="img">/image/adult.dostoevski.jpg</p>
+                        <p id="img"><img src="/image/adult.dostoevski.jpg" alt=""></p>
+                        <p id="pasi">20 </p>
+                        <p id="avtori">ფიოდორ დოსტოევსკი</p>
+                        <p id="dasaxeleca">"იდიოტი"</p>
+                        <p id="shesaxeb">anotacia</p>
+                    </div>
+                    <div class="div2 div">
+                        <i class="fa-solid fa-cart-plus "></i>
+                        <p class="img">/image/adult.duma.jpg</p>
+                        <p id="img"><img src="/image/adult.duma.jpg" alt=""></p>
+                        <p id="pasi">20 </p>
+                        <p id="avtori">ალექსანდერ დიუმა</p>
+                        <p id="dasaxeleca">"გრაფი მონტეკრისტო"</p>
+                        <p id="shesaxeb">anotacia</p>
+                    </div>
+                    <div class="div2 div">
+                        <i class="fa-solid fa-cart-plus"></i>
+                        <p class="img">/image/adult.karamazoveni.png</p>
+                        <p id="img"><img src="/image/adult.karamazoveni.png" alt=""></p>
+                        <p id="pasi">20 </p>
+                        <p id="avtori">ფიოდორ დოსტოევსკი</p>
+                        <p id="dasaxeleca">"ძმები კარამაზოვები"</p>
+                        <p id="shesaxeb">anotacia</p>
+                    </div>
+                    <div class="div2 div">
+                        <i class="fa-solid fa-cart-plus"></i>
+                        <p class="img">/image/adult.goete.jpg</p>
+                        <p id="img"><img src="/image/adult.goete.jpg" alt=""></p>
+                        <p id="pasi">20 </p>
+                        <p id="avtori">ვოლფგანგ გოეთე</p>
+                        <p id="dasaxeleca">"ფაუსტი"</p>
+                        <p id="shesaxeb">anotacia</p>
+                    </div>
+                    <div class="div2 div">
+                        <i class="fa-solid fa-cart-plus"></i>
+                        <p class="img">/image/adult.konstantine.png</p>
+                        <p id="img"><img src="/image/adult.konstantine.png" alt=""></p>
+                        <p id="pasi">20 </p>
+                        <p id="avtori">კონსტანტინე გამსახურდია</p>
+                        <p id="dasaxeleca">"დავით აღმაშენებელი"</p>
+                        <p id="shesaxeb">anotacia</p>
+
+                    </div>
+                    <div class="div2 div">
+                        <i class="fa-solid fa-cart-plus"></i>
+                        <p class="img">/image/adult.makiavel.jpg</p>
+                        <p id="img"><img src="/image/adult.makiavel.jpg" alt=""></p>
+                        <p id="pasi">20 </p>
+                        <p id="avtori">ნიკოლო მაკიაველე</p>
+                        <p id="dasaxeleca">"მთავარი"</p>
+                        <p id="shesaxeb">anotacia</p>
+
+                    </div>
+                    <div class="div2 div">
+                        <i class="fa-solid fa-cart-plus"></i>
+                        <p class="img">/image/adult.verter.webp</p>
+                        <p id="img"><img src="/image/adult.verter.webp" alt=""></p>
+                        <p id="pasi">20 </p>
+                        <p id="avtori">ვოლფგანგ გოეთე</p>
+                        <p id="dasaxeleca">"ახალგაზრდა ვერთეთის ვნებანი"</p>
+                        <p id="shesaxeb">anotacia</p>
+
+                    </div>
+                    <div class="div2 div">
+                        <i class="fa-solid fa-cart-plus"></i>
+                        <p class="img">/image/child.godezi.chox.png</p>
+                        <p id="img"><img src="/image/child.godezi.chox.png" alt=""></p>
+                        <p id="pasi">20 </p>
+                        <p id="avtori">გდერძი ჩოხელი</p>
+                        <p id="dasaxeleca">"ძღაპრები"</p>
+                        <p id="shesaxeb">anotacia</p>
+
+                    </div>
+                    <div class="div2 div">
+                        <i class="fa-solid fa-cart-plus"></i>
+                        <p class="img">/image/child.gogebashvili.jpg</p>
+                        <p id="img"><img src="/image/child.gogebashvili.jpg" alt=""></p>
+                        <p id="pasi">20 </p>
+                        <p id="avtori">იაკობ გოგებაშვილი</p>
+                        <p id="dasaxeleca">"ერეკლე მეფე და ინგილო ქალი"</p>
+                        <p id="shesaxeb">anotacia</p>
+                    </div>
+                    <div class="div2 div">
+                        <i class="fa-solid fa-cart-plus"></i>
+                        <p class="img">/image/child.grimebi.png</p>
+                        <p id="img"><img src="/image/child.grimebi.png" alt=""></p>
+                        <p id="pasi">20 </p>
+                        <p id="avtori">ძმები გრიმები</p>
+                        <p id="dasaxeleca">"ძღაპრები"</p>
+                        <p id="shesaxeb">anotacia</p>
+                    </div>
+                    <div class="div2 div">
+                        <i class="fa-solid fa-cart-plus"></i>
+                        <p class="img">/image/child.otia.jpg</p>
+                        <p id="img"><img src="/image/child.otia.jpg" alt=""></p>
+                        <p id="pasi">20 </p>
+                        <p id="avtori">სულხან-საბა იოსელიანი</p>
+                        <p id="dasaxeleca">"იგავები"</p>
+                        <p id="shesaxeb">anotacia</p>
+                    </div>
+                    <div class="div2 div">
+                        <i class="fa-solid fa-cart-plus"></i>
+                        <p class="img">/image/child.said.kunzuli.jpg</p>
+                        <p id="img"><img src="/image/child.said.kunzuli.jpg" alt=""></p> 
+                        <p id="pasi">20 </p>
+                        <p id="avtori">ჟიულ ვერნი</p>
+                        <p id="dasaxeleca">"საიდუმლო კუნძული"</p>
+                        <p id="shesaxeb">anotacia</p>
+                    </div>
+
+
+                </div>
+            </div>
+            <button id="left"> < </button>
+            <button id="right"> > </button>
+        </div>
+        <!-- slide  -->
+        <!-- <div class="slide">
+            <div class="slide-child">
+          
+    
+            </div>
+            <button id="left"> < </button>
+            <button id="right"> > </button> -->
+
+<!--  -->
+        <div id="description">
+            <button id="exit1">x</button>
+            <img src="/image/adult.chabua.jpg" width="100px" alt="">
+            <p id="avtor"></p>
+            <p id="prise"></p>
+            <p id="name"></p>
+            <p id="more">ვრცლად...</p>
+            <p id="about">Lorem</p>
+            <button class="addtocart">კალათში დამატება</button>
+        </div>
+
+        <section class="clasofsearch" id="clasofsearch"> 
+            <!-- <div class="div searchdiv">
+
+            </div> -->
+
+        </section>
+
+        <section id="adult">
+            <p id="titel-adult" class="pa" >მკითხველთათვის რეკომენდირებული</p>
+            <div class="container container-adult" >
+                <div class="div chabua ამირეჯიბი div-1   alldiv">
+                    <i class="fa-solid fa-cart-plus addtocart"></i>
+                    <p id="img"><img src="/image/adult.chabua.jpg"  alt=""></p>
+                    <p id="pasi">20 </p>
+                    <p id="avtori">ჭაბუა ამირეჯიბი</p>
+                    <p id="dasaxeleca">"დათა თუთაშხია"</p>
+                    <p id="shesaxeb">Lorem ipsum dolor sit,</p>
+                </div>
+                <div class="div  dante div-2  alldiv">
+                    <i class="fa-solid fa-cart-plus addtocart"></i>
+                    
+                    <p id="img"><img src="/image/adult.dante.jpg" alt=""></p>
+                    <p id="pasi">25 </p>
+                    <p id="avtori">დანტე ალეგიერი</p>
+                    <p id="dasaxeleca">"ღვთაებრივი კომედია"</p>
+                    <p id="shesaxeb">Lorem, ipsum.</p>
+                </div>
+                <div class="div diuma div-3  alldiv">
+                    <i class="fa-solid fa-cart-plus addtocart"></i>
+                    
+                    <p id="img"><img src="/image/adult.diuma.webp" alt=""></p>
+                    <p id="pasi">20 </p>
+                    <p id="avtori">ალექსანდრე დიუმა</p>
+                    <p id="dasaxeleca">"კავკასია"</p>
+                    <p id="shesaxeb">anotacia</p>
+                </div>
+                <div class="div dostoevski div-4  alldiv">
+                    <i class="fa-solid fa-cart-plus addtocart"></i>
+                    
+                    <p id="img"><img src="/image/adult.dostoevski.jpg" alt=""></p>
+                    <p id="pasi">20 </p>
+                    <p id="avtori">ფიოდორ დოსტოევსკი</p>
+                    <p id="dasaxeleca">"იდიოტი"</p>
+                    <p id="shesaxeb">anotacia</p>
+                </div>
+                <div class="div diuma div-5 div-hiden  alldiv">
+                    <i class="fa-solid fa-cart-plus addtocart"></i>
+                    
+                    <p id="img"><img src="/image/adult.duma.jpg" alt=""></p>
+                    <p id="pasi">20 </p>
+                    <p id="avtori">ალექსანდერ დიუმა</p>
+                    <p id="dasaxeleca">"გრაფი მონტეკრისტო"</p>
+                    <p id="shesaxeb">anotacia</p>
+                </div>
+                <div class="div dostoevski div-6 div-hiden  alldiv">
+                    <i class="fa-solid fa-cart-plus addtocart"></i>
+                    
+                    <p id="img"><img src="/image/adult.karamazoveni.png" alt=""></p>
+                    <p id="pasi">20 </p>
+                    <p id="avtori">ფიოდორ დოსტოევსკი</p>
+                    <p id="dasaxeleca">"ძმები კარამაზოვები"</p>
+                    <p id="shesaxeb">anotacia</p>
+                </div>
+                <div class="div goete div-7 div-hiden  alldiv">
+                    <i class="fa-solid fa-cart-plus addtocart"></i>
+                    <p id="img"><img src="/image/adult.goete.jpg" alt=""></p>
+                    <p id="pasi">20 </p>
+                    <p id="avtori">ვოლფგანგ გოეთე</p>
+                    <p id="dasaxeleca">"ფაუსტი"</p>
+                    <p id="shesaxeb">anotacia</p>
+                </div>
+                <div class="div gamsaxurdia div-8 div-hiden alldiv">
+                    <i class="fa-solid fa-cart-plus addtocart"></i>
+                    <p id="img"><img src="/image/adult.konstantine.png" alt=""></p>
+                    <p id="pasi">20 </p>
+                    <p id="avtori">კონსტანტინე გამსახურდია</p>
+                    <p id="dasaxeleca">"დავით აღმაშენებელი"</p>
+                    <p id="shesaxeb">anotacia</p>
+                </div>
+                <div class="div makiavele div-9 div-hiden  alldiv">
+                    <i class="fa-solid fa-cart-plus addtocart"></i>
+                    <p id="img"><img src="/image/adult.makiavel.jpg" alt=""></p>
+                    <p id="pasi">20 </p>
+                    <p id="avtori">ნიკოლო მაკიაველე</p>
+                    <p id="dasaxeleca">"მთავარი"</p>
+                    <p id="shesaxeb">anotacia</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="child">
+            <p  id="titel-child"  class="pa">საბავშვო</p>
+            <div class="container">
+                <div class="div choxeli div-1  alldiv">
+                    <i class="fa-solid fa-cart-plus addtocart"></i>
+                    <p id="img"><img src="/image/child.godezi.chox.png" alt=""></p>
+                    <p id="pasi">20 </p>
+                    <p id="avtori">გპდერძი ჩოხელი</p>
+                    <p id="dasaxeleca">"ძღაპრები"</p>
+                    <p id="shesaxeb">anotacia</p>
+                </div>
+                <div class="div gogebashvili div-2 alldiv">
+                    <i class="fa-solid fa-cart-plus addtocart"></i>
+                    <p id="img"><img src="/image/child.gogebashvili.jpg" alt=""></p>
+                    <p id="pasi">20 </p>
+                    <p id="avtori">იაკობ გოგებაშვილი</p>
+                    <p id="dasaxeleca">"ერეკლე მეფე და ინგილო ქალი"</p>
+                    <p id="shesaxeb">anotacia</p>
+                </div>
+                <div class="div grimebi div-3  alldiv">
+                    <i class="fa-solid fa-cart-plus addtocart"></i>
+                    <p id="img"><img src="/image/child.grimebi.png" alt=""></p>
+                    <p id="pasi">20 </p>
+                    <p id="avtori">ძმები გრიმები</p>
+                    <p id="dasaxeleca">"ძღაპრები"</p>
+                    <p id="shesaxeb">anotacia</p>
+                </div>
+                <div class="div grimebi div-4  alldiv addtocart">
+                    <i class="fa-solid fa-cart-plus "></i>
+                    <p id="img"><img src="/image/child.grimebi2.png" alt=""></p>
+                    <p id="pasi">20 </p>
+                    <p id="avtori">ძმები გრიმები</p>
+                    <p id="dasaxeleca">"ზღაპრები"</p>
+                    <p id="shesaxeb">anotacia</p>
+                </div>
+                <div class="div  xalxuri div-5 child-divhidden alldiv">
+                    <i class="fa-solid fa-cart-plus addtocart"></i>
+                    <p id="img"><img src="/image/child.nacarqeqia.jpg" alt=""></p>
+                    <p id="pasi">20 </p>
+                    <p id="avtori">ხალხური</p>
+                    <p id="dasaxeleca">"ნაცარქექია"</p>
+                    <p id="shesaxeb">anotacia</p>
+                </div>
+                <div class="div sulxan-saba div-6 child-divhidden  alldiv">
+                    <i class="fa-solid fa-cart-plus addtocart"></i>
+                    <p id="img"><img src="/image/child.otia.jpg" alt=""></p>
+                    <p id="pasi">20 </p>
+                    <p id="avtori">სულხან-საბა იოსელიანი</p>
+                    <p id="dasaxeleca">"იგავები"</p>
+                    <p id="shesaxeb">anotacia</p>
+                </div>
+                <div class="div ioseliani div-7 child-divhidden  alldiv">
+                    <i class="fa-solid fa-cart-plus addtocart"></i>
+                    <p id="img"><img src="/image/child.otia.png" alt=""></p>
+                    <p id="pasi">20 </p>
+                    <p id="avtori">ოტია იოსელიანი</p>
+                    <p id="dasaxeleca">"დაჩის ზღაპრები"</p>
+                    <p id="shesaxeb">anotacia</p>
+                </div>
+                <div class="div depo div-8 child-divhidden  alldiv">
+                    <i class="fa-solid fa-cart-plus addtocart"></i>
+                    <p id="img"><img src="/image/child.robinzon.png" alt=""></p>
+                    <p id="pasi">20 </p>
+                    <p id="avtori">დანიელ დეფო</p>
+                    <p id="dasaxeleca">"რობიმზონ კრუზო"</p>
+                    <p id="shesaxeb">anotacia</p>
+                </div>
+                <div class="div jiul-vern div-9 child-divhidden  alldiv">
+                    <i class="fa-solid fa-cart-plus addtocart"></i>
+                    <p id="img"><img src="/image/child.said.kunzuli.jpg" alt=""></p> 
+                    <p id="pasi">20 </p>
+                    <p id="avtori">ჟიულ ვერნი</p>
+                    <p id="dasaxeleca">"საიდუმლო კუნძული"</p>
+                    <p id="shesaxeb">anotacia</p>
+                </div>
+            </div>
+        </section>
+        <div id="button1">
+            <button >1</button>
+            <button id="button2-2">2</button>
+        </div>
+        
+        <section id="poetry">
+            <p  id="titel-poetry" class="pa">პოეზია</p>
+            <div class="container">
+                <div class="div asatiani div-1 alldiv">
+                    <i class="fa-solid fa-cart-plus addtocart"></i>
+                    <p id="img"><img src="/image/poetry.asatiani.png" alt=""></p>
+                    <p id="pasi">20 </p>
+                    <p id="avtori">ლადო ასათიანი</p>
+                    <p id="dasaxeleca">"ლექსები"</p>
+                    <p id="shesaxeb">anotacia</p>
+                </div>
+                <div class="div baironi div-2  alldiv">
+                    <i class="fa-solid fa-cart-plus addtocart"></i>
+                    <p id="img"><img src="/image/poetry.bairon.jpeg" alt=""></p>
+                    <p id="pasi">20 </p>
+                    <p id="avtori">ბაირონი</p>
+                    <p id="dasaxeleca">"ლექსები"</p>
+                    <p id="shesaxeb">anotacia</p>
+                </div>
+                <div class="div baratashvili div-3  alldiv">
+                    <i class="fa-solid fa-cart-plus addtocart"></i>
+                    <p id="img"><img src="/image/poetry.baratashvili.jpeg" alt=""></p>
+                    <p id="pasi">20 </p>
+                    <p id="avtori">ნიკოლოძ ბარათაშვილი</p>
+                    <p id="dasaxeleca">"ლექსები"</p>
+                    <p id="shesaxeb">anotacia</p>
+                </div>
+                <div class="div tabidze div-4  alldiv">
+                    <i class="fa-solid fa-cart-plus addtocart"></i>
+                    <p id="img"><img src="/image/poetry.galaqtioni.jpeg" alt=""></p>
+                    <p id="pasi">20 </p>
+                    <p id="avtori">გალაქტიონ ტაბიძე</p>
+                    <p id="dasaxeleca">"ლექსები"</p>
+                    <p id="shesaxeb">anotacia</p>
+                </div>
+                <div class="div homerosi div-5 poetry-divhidden  alldiv">
+                    <i class="fa-solid fa-cart-plus addtocart"></i>
+                    <p id="img"><img src="/image/poetry.homerosi.jpeg" alt=""></p>
+                    <p id="pasi">20 </p>
+                    <p id="avtori">ჰომეროსი</p>
+                    <p id="dasaxeleca">"ილიადა"</p>
+                    <p id="shesaxeb">anotacia</p>
+                </div>
+                <div class="div pushkini div-6 poetry-divhidden  alldiv">
+                    <i class="fa-solid fa-cart-plus addtocart"></i>
+                    <p id="img"><img src="/image/poetry.pushkin.jpeg" alt=""></p>
+                    <p id="pasi">20 </p>
+                    <p id="avtori">ალექსანდრ პუშკინი</p>
+                    <p id="dasaxeleca">"ლექსები"</p>
+                    <p id="shesaxeb">anotacia</p>
+                </div>
+                <div class="div rustaveli div-7 poetry-divhidden  alldiv">
+                    <i class="fa-solid fa-cart-plus addtocart"></i>
+                    <p id="img"><img src="/image/poetry.rustaveli.jpeg" alt=""></p>
+                    <p id="pasi">20 </p>
+                    <p id="avtori">შოთა რუსთაველი</p>
+                    <p id="dasaxeleca">"ვეფხვისტყაოსანი"</p>
+                    <p id="shesaxeb">anotacia</p>
+                </div>
+                <div class="div sheqspiri div-8 poetry-divhidden  alldiv">
+                    <i class="fa-solid fa-cart-plus addtocart"></i>
+                    <p id="img"><img src="/image/poetry.sheqspity.jpg" alt=""></p>
+                    <p id="pasi">20 </p>
+                    <p id="avtori">უილიამ შექსპირი</p>
+                    <p id="dasaxeleca">"სონეტები"</p>
+                    <p id="shesaxeb">anotacia</p>
+                </div>
+                <div class="div vaja-pshavela div-9 poetry-divhidden  alldiv">
+                    <i class="fa-solid fa-cart-plus addtocart"></i>
+                    <p id="img"><img src="/image/poetry.vaja.jpg" alt=""></p>
+                    <p id="pasi">20 </p>
+                    <p id="avtori">ვაჟა ფშაველა</p>
+                    <p id="dasaxeleca">"პოემები"</p>
+                    <p id="shesaxeb">anotacia</p>
+                </div>
+            </div>
+        </section>
+
+        <section  id="langauge">
+            <p id="titel-langauge" class="pa" >უცხო ენოვანი</p>
+            <div class="container">
+                <div class="div  mori div-1 alldiv">
+                    <i class="fa-solid fa-cart-plus addtocart"></i>
+                    <p id="img"><img src="/image/langauge.english.jpg" alt=""></p>
+                    <p id="pasi">20 </p>
+                    <p id="avtori">ტომას მორი</p>
+                    <p id="dasaxeleca">"უტოპია"</p>
+                    <p id="shesaxeb">anotacia</p>
+                </div>
+                <div class="div georg-martini div-2  alldiv">
+                    <i class="fa-solid fa-cart-plus addtocart"></i>
+                    <p id="img"><img src="/image/language.englis.jpg" alt=""></p>
+                    <p id="pasi">20 </p>
+                    <p id="avtori">გეორგ მარტინ</p>
+                    <p id="dasaxeleca">"ყინულისა და ცეცხლისა სამყარო"</p>
+                    <p id="shesaxeb">anotacia</p>
+                </div>
+                <div class="div sheqspiri div-3 language-divhidden  alldiv">
+                    <i class="fa-solid fa-cart-plus addtocart"></i>
+                    <p id="img"><img src="/image/language.english..jpg" alt=""></p>
+                    <p id="pasi">20 </p>
+                    <p id="avtori">უილიამ შექსპირი</p>
+                    <p id="dasaxeleca">"მეფე ლირი"</p>
+                    <p id="shesaxeb">anotacia</p>
+                </div>
+                <div class="div tolkin div-4 language-divhidden  alldiv">
+                    <i class="fa-solid fa-cart-plus addtocart"></i>
+                    <p id="img"><img src="/image/language.english.jpg" alt=""></p>
+                    <p id="pasi">20 </p>
+                    <p id="avtori">ჯონ რონალდ ტოლკინი.</p>
+                    <p id="dasaxeleca">"ბეჭდების მბრაძანებელი"</p>
+                    <p id="shesaxeb">anotacia</p>
+                </div>
+                <!-- <div class="div div-5">
+                    <i class="fa-solid fa-cart-plus zuzak alldiv"></i>
+                    <p class="img">/image/langauge.german.jpg</p>
+                    <p id="img"><img src="/image/langauge.german.jpg" alt=""></p>
+                    <p id="pasi">20 </p>
+                    <p id="avtori">მარკუს ზუზაკი</p>
+                    <p id="dasaxeleca">"წიგნის ქურდი"</p>
+                    <p id="shesaxeb">anotacia</p>
+                </div> -->
+                <div class="div tomas-man div-6 language-divhidden  alldiv">
+                    <i class="fa-solid fa-cart-plus addtocart"></i>
+                    <p id="img"><img src="/image/language.german..jpeg" alt=""></p>
+                    <p id="pasi">20 </p>
+                    <p id="avtori">ტომას მანი</p>
+                    <p id="dasaxeleca">"ჯადოსნური მთა"</p>
+                    <p id="shesaxeb">anotacia</p>
+                </div>
+                <div class="div goete div-7 language-divhidden  alldiv">
+                    <i class="fa-solid fa-cart-plus addtocart"></i>
+                    <p id="img"><img src="/image/language.german.webp" alt=""></p>
+                    <p id="pasi">20 </p>
+                    <p id="avtori">ვოლფგანგ გოეთე</p>
+                    <p id="dasaxeleca">"ახალგაზრდა ვერთერის ვნებანი"</p>
+                    <p id="shesaxeb">anotacia</p>
+                </div>
+                <div class="div tomas-man div-8 language-divhidden  alldiv">
+                    <i class="fa-solid fa-cart-plus addtocart"></i>
+                    <p id="img"><img src="/image/language.german..jpeg" alt=""></p>
+                    <p id="pasi">20 </p>
+                    <p id="avtori">ტომას მანი</p>
+                    <p id="dasaxeleca">"ჯადოსნური მთა"</p>
+                    <p id="shesaxeb">anotacia</p>
+                </div>
+                <div class="div dostoevski div-9  alldiv">
+                    <i class="fa-solid fa-cart-plus addtocart"></i>
+                    <p id="img"><img src="/image/language.rashen..jpg" alt=""></p>
+                    <p id="pasi">20 </p>
+                    <p id="avtori">ფიოდორ დოსტოევსკი</p>
+                    <p id="dasaxeleca">"დანაშაული და სასჯელი"</p>
+                    <p id="shesaxeb">anotacia</p>
+                </div>
+                <div class="div tostoi div-10 language-divhidden  alldiv">
+                    <i class="fa-solid fa-cart-plus addtocart"></i>
+                    <p id="img"><img src="/image/language.rashen.jpg" alt=""></p>
+                    <p id="pasi">20 </p>
+                    <p id="avtori">ტოლსტოი</p>
+                    <p id="dasaxeleca">"ომი და მშვიდობა"</p>
+                    <p id="shesaxeb">anotacia</p>
+                </div>
+
+                <div class="div dostoevski div-11 language-divhidden  alldiv">
+                    <i class="fa-solid fa-cart-plus addtocart"></i>
+                    <p id="img"><img src="/image/language.rushen...jpg" alt=""></p>
+                    <p id="pasi">20 </p>
+                    <p id="avtori">ფიოდორ დოსტოევსკი</p>
+                    <p id="dasaxeleca">"ეშმაკნი"</p>
+                    <p id="shesaxeb">anotacia</p>
+                </div>
+                <div class="div bulgakov div-12 language-divhidden  alldiv">
+                    <i class="fa-solid fa-cart-plus addtocart"></i>
+                    <p id="img"><img src="/image/language.rushen.jpg" alt=""></p>
+                    <p id="pasi">20 </p>
+                    <p id="avtori">ბულგაკოვ</p>
+                    <p id="dasaxeleca">"ოსტატი და მარგარიტა"</p>
+                    <p id="shesaxeb">anotacia</p>
+                </div>
+            </div>
+        </section>
+        <div id="button2">
+            <button id="button1-1">1</button>
+            <button >2</button>
+        </div>
+    </main>
+    <footer>
+        
+    </footer>
+    <script src="script.js">
+    </script>
+</body>
+</html>

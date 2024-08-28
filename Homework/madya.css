@@ -1,0 +1,115 @@
+@media(min-width:500px){
+
+    main nav .menu{
+        width: 40px;
+        visibility: visible;
+    }
+    main section{
+        display: grid;
+        grid-template-columns:  1fr;
+        width: 400px;
+    }
+
+    main section .div #img img{
+        width: 150px;
+        transition: 1s;
+        height: 200px;
+    }
+
+    main .slide{
+        display: flex;
+
+    }
+
+    main #nav{ 
+        width:50%; 
+    }
+    
+    main #description{
+        width:450px;
+        /* display: none; */
+    }
+
+    main #description img{
+        justify-self: center;
+        /* width:; */
+        object-fit:contain;
+        /* height: 240px; */
+    }
+
+
+    main #adult .container .div-hiden{
+        display: none;
+    }
+
+    main  #child  .child-divhidden{
+        display: none;
+    }
+
+    main  #poetry .poetry-divhidden{
+        display: none;
+    }
+
+    main  #langauge .language-divhidden{
+        display:none;
+    }
+
+}
+
+@media(min-width:800px){
+
+    main section .container{
+        grid-template-columns: repeat(3,1fr);
+        align-self: center;
+        justify-self: center;
+        
+    }
+
+    main #adult .container .div-hiden{
+        display: grid;
+    }
+
+    main  #child  .child-divhidden{
+        display: grid;
+    }
+
+    main  #poetry .poetry-divhidden{
+        display: grid;
+    }
+
+    main  #langauge .language-divhidden{
+        display:grid;
+    }
+
+    main section{
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 700px;
+    }
+
+
+    main section .div{
+        margin: 10px;
+        padding: 10px;
+        width: 175px;
+    
+    }
+
+    main section .div #img img{
+        width: 150px;
+        transition: 1s;
+        height: 200px;
+    }
+}
+
+@media(min-width:950px){
+    main nav .menu{
+        width: 40px;
+        visibility: hidden;
+    }
+
+    main #nav1{
+        visibility:visible;
+        /* left: 10px; */
+    }
+}

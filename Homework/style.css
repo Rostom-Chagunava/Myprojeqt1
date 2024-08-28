@@ -1,0 +1,1006 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+    /* justify-content: start; */
+    height: 100vh;
+}
+
+/*style header */
+header{
+    width: 100%;
+    height: 60px;
+    background-color:#e4bf28;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    padding: 35px 70px 35px 90px;
+}
+
+header h2{
+    font-size: 0.8rem;
+}
+
+/* // */
+header .titel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+header .titel img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+header .titel img:hover{
+    transform: scale(1.2);
+    border: 3px solid rgb(10, 106, 10);
+}
+
+
+header .titel #homepage{
+    transition: 0.5s;
+}
+header .titel #homepage:hover{
+    transform: scale(1.2);
+}
+/* // */
+
+header .register{
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+header .register  .person{
+    visibility: hidden;
+    
+}
+
+
+
+/*  */
+header .regist{
+    display: none;
+    position: absolute;
+    top: 80px;
+    right: -69px;
+    z-index: 9999;
+    background-color: #0a0a0a;
+    padding: 50px;
+
+}
+
+
+
+header .register .log-in{
+    cursor: pointer;
+}
+
+header .register .log-aut{
+    display: block;
+    display: none;
+    cursor: pointer;
+    /* display: block; */
+}
+
+
+#register{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #6314ad;
+    padding: 30px 40px;
+    border-radius: 20px;
+    /* display: none; */
+}
+
+#register .input-reg{
+    padding:10px;
+    border-radius: 0.5rem;
+    border: none;
+}
+
+#register input[type=button]{
+    margin: auto;
+    padding:5px;
+    width: 50%;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#register input[type=button]:hover{
+    background-color: black;
+    color: white;
+}
+
+#log-in{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #6314ad;
+    padding: 30px 40px;
+    border-radius: 20px;
+    display: none;
+}
+
+#log-in .input-reg{
+    padding:10px;
+    border-radius: 0.5rem;
+    border: none;
+}
+
+#log-in input[type=button]{
+    margin: auto;
+    padding:5px;
+    width: 50%;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+
+#log-in input[type=button]:hover{
+    background-color: black;
+    color: white;
+}
+
+
+.p{
+    color: #fff;
+}
+
+.p span{
+    color: #e78585;
+    cursor: pointer;
+}
+
+
+
+/*  */
+header .register img{
+    width: 30px;
+    height: 30px;
+    margin: 20px;
+    border-radius: 50%;
+    transition:transform 0.5s;
+    cursor: pointer;
+}
+
+header .register img:hover{
+    transform: scale(1.2);
+    border: 2px solid #0a990a;
+}
+
+
+header .register img:active{
+    transform:rotateZ(360deg);
+}
+
+
+header .register #regitration{
+    padding: 3px;
+}
+
+header .register #regitration:hover{
+    background-color: #f0f8ff;
+    border-radius: 3px;
+}
+
+/*  */
+header .register #sing-in{
+    padding: 3px;
+    color: #f60909;
+}
+
+header .register #sing-in:hover{
+    background-color: #f0f8ff;
+    color: #000;
+    border-radius: 3px;
+}
+
+
+/* //main// */
+main{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* //style nav// */
+
+main nav{
+    width: 100%;
+    height: 30px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* /// style menu//// */
+
+/* //// style shopping cart */
+
+main nav .card{
+    position: relative;
+    display: grid;
+    gap: 20px;
+    width: 100%;
+}
+
+
+main nav .card i{
+    grid-area: 1/2/2/3;
+    justify-self: end;
+    align-self: center;
+    cursor: pointer;
+}
+
+main nav .card .search{
+    grid-area: 1/1/2/2;
+    justify-self: end;
+    /* border: 1px solid black;
+    border-radius: 5px;
+    padding: 3px; */
+}
+
+main nav .card .search input{
+    border: none;
+    /* border-bottom: 0.9px solid black; */
+    padding: 2px;
+    cursor: pointer;
+    width: 130px;
+
+}
+
+main nav .card .search i{
+    font-size: 13px;
+}
+
+hr{
+    width: 100%;
+}
+
+main nav .cartnum{
+    background-color: #a00909;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    text-align: center;
+    display: flex;
+    /* justify-content:start; */
+    align-items: end;
+    position: absolute;
+    right: 2px;
+    top: 7px;
+    /* z-index: -1; */
+    display: none;
+}
+
+main nav .cartnum p{
+    color: #ffffff;
+    font-size: 0.4rem;
+}
+
+/* ///////////////////shoppingdiv  ////// */
+
+main nav #shoppingdiv{
+    position: absolute;
+    width:90%;
+    top:25px;
+    right: 0px;
+    background-color: #585454;
+    z-index: 999;
+    border-radius: 2px;
+    overflow: hidden;
+    height: 0px;
+    /* display: none; */
+    transition: 1s;
+    width:250px;
+    /* padding: 8px 10px 10px 10px; */
+
+}
+
+main nav #shoppingdiv li{
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    color: #f0f8ff;
+    gap: 5px;
+}
+
+main nav #shoppingdiv li #exit{
+    grid-area: 1/4/2/5;
+    align-self:end;
+    justify-self: end;
+    background-color: #eee1e1;
+    padding: 2px;
+    font-size: 7px;
+    border-radius: 2px;
+    border: none;
+}
+
+main nav #shoppingdiv li .contp{
+    grid-area: 2/1/3/5;
+    border-bottom: 1px solid white;
+    /* background-color: #7a8b9a; */
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+#cont-img{
+    width: 100%;
+    /* grid-area: 3/1/4/5; */
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+} 
+
+main nav #shoppingdiv li .sum-num{
+    font-size: 10px;
+    padding: 3px;
+}
+
+main nav #shoppingdiv li .sum-prise{
+    font-size: 10px;
+    padding: 3px;
+}
+
+main nav #shoppingdiv li #buy{
+    grid-area: 4/4/5/5;
+    width: 60px;
+    align-self: center;
+    justify-self: end;
+}
+
+
+main nav #shoppingdiv li #container-shop{
+    grid-area: 3/1/4/5;
+    display: flex;
+    flex-direction: column;
+    align-items:start;
+    justify-content:center;
+    gap: 10px;
+    width: 220px;
+}
+
+/* ////////////!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+.child1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.child1 img{
+    height: 60px;
+}
+
+
+.shopautor{
+    font-size:0.5rem;
+}
+
+.shopdel{
+    background-color: #eee1e1;
+    color: #000;
+    font-size: 8px;
+    margin: 2px;
+    border-radius: 2px;
+    padding:1px 2px 2px 2px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.shopdel:hover{
+    background-color: #a40606;
+    color: #ece8e8;
+    transform: scale(1.3);
+    /* border-radius: 2px;
+    padding:1px 2px 2px 2px; */
+}
+
+/* //////////!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/* //// */
+
+/* .visible{
+    display:grid;
+}
+
+.hidden{
+    display: none;
+    
+} */
+/* ////////////////////////////////////////// */
+/* /////////decription/////// */
+
+main #description{
+    position:relative;
+    background-color: #e4bf28;
+    top: 2px;
+    /* right:90%; */
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5px;
+    z-index: 999;
+    padding: 10px;
+    display: none;
+}
+
+
+
+main #description #exit1{
+    grid-area: 1/3/2/4;
+    width: 20px;
+    height: 20px;
+    align-self: flex-end;
+    justify-self: end;
+    transition: 1s;
+}
+
+
+main #description #exit1:hover{
+    background-color: #000;
+    color: #ffffff;
+}
+
+
+main #description img{
+    grid-area: 2/1/3/4;
+    /* align-self: center; */
+    justify-self: center;
+    width:80%;
+    object-fit: cover;
+    height: 240px;
+}
+
+main #description #avtor{
+    grid-area: 3/1/4/2;
+    font-size: 10px;
+    font-weight: 900;
+    font-style: italic;
+    width: 100%;
+    padding: 0 20px 0 0;
+}
+
+main #description #prise{
+    grid-area: 3/2/4/3;
+    align-self: center;
+    justify-self: center;
+    font-size: 10px;
+    padding: 0 20px 0 0;
+}
+
+main #description #name{
+    grid-area: 3/3/4/4;
+    font-size: 10px;
+    font-style: italic;
+    font-weight: 900;
+}
+
+main #description .cont-p{
+    width: 100%;
+    grid-area: 3/1/4/4;
+    display: flex;
+    /* flex-direction: column; */
+    align-items:center;
+    justify-content:space-between;
+    color: #000000;
+}
+
+main #description #more{
+    grid-area: 4/1/5/4;
+    align-self: center;
+    justify-self: center;
+    font-weight: 550;
+    cursor: pointer;
+}
+
+main #description #more:hover{
+    text-decoration: underline;
+}
+
+main #description #about{
+    position: absolute;
+    /* / */
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-style: italic;
+    top: 0px;
+    height:390px;
+    width: 100%;
+    opacity: 0.8;
+    display: none;
+}
+
+main #description .addtocart{
+    grid-area: 5/1/6/4;
+    padding: 2px 10px ;
+    border-radius: 2px;
+    justify-self: center;
+    border: none;
+    cursor: pointer;
+    width: 150px;
+    transition: 1s;
+    z-index: 9999;
+}
+
+main #description .addtocart:hover{
+    background-color: rgb(3, 3, 3);
+    color: #ffffff;
+}
+
+/* ////// */
+main #nav{
+    position: absolute;
+    background-color: #0a0a0a;
+    top:85px;
+    left: -100%;
+    color: #ffffff;
+    padding: 20px;
+    height: 30vh;
+    width:100%;
+    transition: 1s;
+    z-index: 999;
+}
+
+main #nav1{
+    position: absolute;
+    width: 150px;
+    top: 220px;
+    visibility: hidden;
+
+    /* left: 10px; */
+}
+
+main #nav1 .container{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+main #nav1 .container p{
+    font-size:1rem;
+    font-weight: bold;
+    transition: 1s;
+    cursor: pointer;
+}
+
+
+main #nav1 .container div:hover{
+    text-decoration: underline;
+}
+/*  */
+main #nav ul li{
+    margin: 10px;
+    cursor: pointer;
+}
+
+main #nav ul li:hover{
+    text-decoration: underline;
+    color: #05cd05;
+}
+
+
+main nav .menu{
+    width: 40px;
+    visibility: visible;
+}
+
+main nav{
+    width: 100%;
+    height: 30px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* // style all secti0n // */
+
+
+/* serch */
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* width: 100%; */
+}
+
+/*  */
+.searchdiv{
+    margin: 10px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns:repeat(3,1fr);
+    border: 1px solid black;
+    border-radius:2px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/*  */
+
+main section{
+    display: grid;
+    grid-template-columns:  1fr;
+    width: 240px;
+}
+
+
+main section .pa{
+    padding:5px 0 0 70px ;
+}
+/*  */
+main section .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+}
+/* /////////////////// */
+main .clasofsearch{
+    display:flex;
+    /* grid-template-columns: 1fr 1fr; */
+    /* align-items: center; */
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    /* height: 250px; */
+    display: none;
+}
+/* //////////////// */
+main section .div{
+    margin: 10px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns:repeat(3,1fr);
+    border: 1px solid black;
+    border-radius:2px;
+    overflow: hidden;
+    cursor: pointer;
+
+}
+
+/* .res{
+    display: none;
+} */
+
+main section .div i{
+    grid-area: 1/3/2/4;
+    translate: 8px -5px;
+    font-size: 12px;
+    align-self: center;
+    justify-self: end;
+    padding: 3px;
+    color: #222527;
+    cursor: pointer;
+}
+
+main section .div i:hover{
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 2px;
+}
+
+/* ///// */
+main section .img{
+    opacity: 0;
+    font-size: 0.1px;
+    object-fit: cover;
+}
+
+
+/* //// */
+
+main section .div #img{
+    align-self: center;
+    justify-self: center;
+    grid-area: 2/1/3/4;
+    overflow: hidden;
+    /* padding: 10px; */
+}
+/* //// */
+.searchpimage{
+    align-self: center;
+    justify-self: center;
+    /* width: 200px; */
+    grid-area: 2/1/3/4;
+    overflow: hidden;
+}
+/* //// */
+main section .div #img img{
+    /* margin: 5px; */
+    width: 80px;
+    transition: 1s;
+    height: 150px;
+}
+/* ///// */
+.serachimage{
+    width: 120px;
+    transition: 1s;
+    height: 150px;
+}
+/* ///// */
+main section .div img:hover{
+    transform: scale(1.2);
+}
+
+main section .div #pasi{
+    grid-area: 3/3/4/4;
+    align-self: center;
+    justify-self: center;
+    font-size: 11px;
+}
+
+/*  */
+.searchprise{
+    grid-area: 3/3/4/4;
+    align-self: center;
+    justify-self: center;
+    font-size: 11px;
+}
+/*  */
+main section .div #avtori{
+    grid-area: 3/1/4/3;
+    font-size: 11px;
+
+}
+/*  */
+.searchavtori{
+    grid-area: 3/1/4/3;
+    font-size: 11px;
+}
+/*  */
+main section .div #dasaxeleca{
+    grid-area: 4/1/5/4;
+    justify-self: center;
+    padding: 10px;
+    font-weight: 900;
+    font-size: 13px;
+}
+/*  */
+.searchdasaxeleba{
+    grid-area: 4/1/5/4;
+    justify-self: center;
+    padding: 10px;
+    font-weight: 900;
+    font-size: 13px;
+}
+/*  */
+main section .div #shesaxeb{
+    grid-area: 5/1/6/4;
+    display: none;
+}
+/*  */
+
+.searchshesaxeb{
+    grid-area: 5/1/6/4;
+    display: none;
+}
+/* main sectio edult */
+ 
+main section #titel-adult{
+    font-size: 11px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+main section #titel-adult:hover{
+    text-decoration: underline;
+}
+
+main #adult .container .div-1{
+    grid-area: 1/1/2/2;
+}
+
+main #adult .container .div-2{
+    grid-area: 1/2/2/3;
+}
+
+main #adult .container .div-hiden{
+    display: none;
+}
+
+
+/* /  section child */
+
+
+main section #titel-child{
+    font-size: 11px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+main section #titel-child:hover{
+    text-decoration: underline;
+}
+
+main  #child  .child-divhidden{
+    display: none;
+}
+
+
+
+/* ////poetry section//// */
+
+main section #titel-poetry{
+    font-size: 11px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+main section #titel-poetry:hover{
+    text-decoration: underline;
+}
+
+main  #poetry .poetry-divhidden{
+    display: none;
+}
+
+main  #poetry {
+    display: none;
+}
+
+/* section laguage */
+
+main section #titel-langauge{
+    font-size: 11px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+main section #titel-langauge:hover{
+    text-decoration: underline;
+}
+
+main  #langauge .language-divhidden{
+    display:none;
+}
+
+main  #langauge{
+    display: none;
+}
+
+/* style button  */
+
+#button2{
+    display: none;
+}
+
+/* /* /* /* /* /* /* ///// style slide//////********* */
+
+main .slide{
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    background-color: rgb(1, 14, 14);
+    display: none;
+    /* z-index:2; */
+}
+main .slide-child{
+    position: absolute;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 90px;
+    background-color: aqua;
+    /* z-index:2; */
+    overflow: hidden;
+}
+main .slide-child-container{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 2000px;
+    height: 80px;
+    background-color: rgb(39, 59, 59);
+}
+
+
+main .slide-child-container div{
+    display: grid;
+    grid-column: 1fr;
+    padding: 5px;
+    background-color: #ffffff;
+    
+}
+
+
+main .slide-child-container div i{
+    font-size: 0.1px;
+    opacity: -1;
+}
+
+main .slide-child-container div .img{
+    font-size: 0.1px;
+    opacity: -1;
+}
+
+
+main .slide-child-container div #pasi{
+    font-size: 0.1px;
+    opacity: -1;
+
+}
+
+main .slide-child-container div #avtori{
+    font-size: 0.1px;
+    opacity: -1;
+}
+
+main .slide-child-container div #dasaxeleca{
+    font-size: 0.1px;
+    opacity: -1;
+}
+
+main .slide-child-container div #shesaxeb{
+    display:none;
+}
+
+main .slide-child-container div #img img{
+
+    width: 60px;
+    height: 70px; 
+} 
+
+
+
+
+
+
+/* .container .div1 , .div9{
+    z-index: -1;
+} */
+#left{
+    font-size: 2rem;
+    color: brown;
+    position: absolute;
+    left:6px;
+    cursor: pointer;
+}
+
+#right{
+    display:flex;
+    font-size: 2rem;
+    color: brown;
+    position: absolute;
+    right: 6px;
+}
+
+
+/*  */
+
+footer{
+    /* position: absolute;
+    bottom: 0%; */
+    margin-top: 440px;
+    padding: 30px;
+    width: 100%;
+    height:60px;
+    background-color: #000;
+}
